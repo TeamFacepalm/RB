@@ -1,11 +1,13 @@
 class User < ActiveRecord::Base
+  has_secure_password
+
   has_many :images
   has_many :votes
   belongs_to :district
 
-  validates :auth_token, presence: true 
+  validates :auth_token, presence: true
   validates_presence_of :first_name, :last_name, :email, :ssn, :dob
-  validates :password, length: { minimum: 8 }
+  validates :password, length: { minimum: 3 }
   validates :email, format: {
     with: /.+@.+\..+/, messages: 'Invalid email'
   }
