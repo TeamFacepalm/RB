@@ -1,3 +1,3 @@
 json.candidates @candidates do |candidates|
-	json.extract! candidates, :avatar, :name, :patrty #votes
+	json.extract! candidates, :avatar, :name, :party #votes
 end
