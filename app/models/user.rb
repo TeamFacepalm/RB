@@ -11,6 +11,18 @@ class User < ActiveRecord::Base
   validates :ssn, format: {
     with: ^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$
   }
+#TODO regex validaton for Date of Birth.
+  def ensure_auth_token
+    unless self.auth_token
+      self.auth_token = User.generate_token
+    end
+  end
 
-  #TODO regex validaton for Date of Birth.
+  def self.generate_token
+    token = SecureRandom.hex
+    while User.exists?(auth_token: token)
+      token = SecureRandom.hex
+    end
+    token
+  end
 end
