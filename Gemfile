@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Ruby interface to the PostgreSQL RDBMS
 gem 'pg'
+# Official AWS SDK for Ruby
+gem 'aws-sdk', '< 2.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -26,6 +28,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 # Rack Middleware for handling Cross-Origin Resource (CORS), which makes cross-origin AJAX possible
 gem 'rack-cors'
+# Easy file attachment management for ActiveRecord
+gem 'paperclip'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -38,6 +42,8 @@ group :development, :test do
   gem 'byebug'
   # An IRB alternative and runtime developer console
   gem 'pry'
+  # Autoload dotevn in Rails
+  gem 'dotenv-rails'
 end
 
 group :development do
