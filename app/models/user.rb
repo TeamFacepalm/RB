@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   has_many :votes
   belongs_to :district
+  has_many :voted_candidates, through: :votes, source: :candidate  
 
   has_attached_file :avatar
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
