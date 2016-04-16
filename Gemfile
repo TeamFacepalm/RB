@@ -32,7 +32,7 @@ gem 'rack-cors'
 gem 'paperclip'
 gem 'faker'
 gem 'faker-medical'
-
+gem 'fabrication'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
