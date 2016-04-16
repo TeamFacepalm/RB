@@ -16,6 +16,4 @@ Fabricator(:user) do
   password_digest { Faker::Internet.password(8) }
 end
 
-binding.pry
-
-5.times { Fabricate(:user) }
+# 5.times { Fabricate(:user) }
