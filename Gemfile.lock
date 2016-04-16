@@ -67,6 +67,7 @@ GEM
       railties (>= 4.0, < 5.1)
     erubis (2.7.0)
     execjs (2.6.0)
+    fabrication (2.15.0)
     faker (1.6.3)
       i18n (~> 0.5)
     faker-medical (0.5.2)
@@ -186,6 +187,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   dotenv-rails
+  fabrication
   faker
   faker-medical
   jbuilder (~> 2.0)

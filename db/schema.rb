@@ -42,6 +42,17 @@ ActiveRecord::Schema.define(version: 20160416201011) do
     t.datetime "image_updated_at"
   end
 
+  create_table "images", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "district_id"
+    t.integer  "candidate_id"
+    t.string   "name"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
