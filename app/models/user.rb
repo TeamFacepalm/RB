@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :images
+  has_many :votes
+  belongs_to :district
+
   validates_presence_of :first_name, :last_name, :email, :ssn, :dob
   validates :password, length: { minimum: 8 }
   validates :email, format: {
