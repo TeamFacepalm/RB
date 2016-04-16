@@ -1,9 +1,8 @@
 class DistrictsController < ApplicationController
-  validates_presence_of :county
-  
   def show
     @district = District.find(county: params[:county])
     render json: { district: @district }, status: :ok
+  end
 
   def index
     @district = District.all
