@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
 # Easy file attachment management for ActiveRecord
 gem 'paperclip'
+gem 'faker'
+gem 'faker-medical'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
