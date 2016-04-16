@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   post 'authorize', to: 'sessions#check_auth'
 
   resources :users
-  resources :candidates, only: :index
-  resources :districts,  only: [:show, :index]  
+  resources :candidates, only: :index do
+    resources :votes, only: :create
+  end
+  resources :districts,  only: [:show, :index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
