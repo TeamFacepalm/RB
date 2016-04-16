@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
     with: /.+@.+\..+/, messages: 'Invalid email'
   }
   validates :ssn, format: {
-    with: ^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$
+    with: /\A(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)\z/
   }
 #TODO regex validaton for Date of Birth.
   def ensure_auth_token
