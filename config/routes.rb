@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  post 'login',     to: 'sessions#create'
-  post 'authorize', to: 'sessions#check_auth'
+  post   'login',     to: 'sessions#create'
+  post   'authorize', to: 'sessions#check_auth'
+  delete 'logout',    to: 'sessions#destroy'
 
   resources :users
   resources :candidates, only: :index do
