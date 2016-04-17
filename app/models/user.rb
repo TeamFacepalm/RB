@@ -10,14 +10,12 @@ class User < ActiveRecord::Base
   validates_attachment_file_name :avatar, matches: [/png\Z/, /jpe?g\Z/]
 
   validates :auth_token, presence: true
-#   validates_presence_of :first_name, :last_name, :email, :ssn, :dob
-#   validates :password, length: { minimum: 3 }
-#   validates :email, format: {
-#     with: /.+@.+\..+/, messages: 'Invalid email'
-#   }
-#   validates :ssn, format: {
-#     with: /\A(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)\z/
-#   }
+  validates_presence_of :first_name, :last_name, :email, :ssn, :dob
+  validates :password, length: { minimum: 3 }
+  validates :email, format: {
+    with: /.+@.+\..+/, messages: 'Invalid email'
+  }
+  validates :ssn, length: {minimum: 11}
 # TODO regex validaton for Date of Birth.
   def ensure_auth_token
     unless self.auth_token
