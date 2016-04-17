@@ -12,7 +12,6 @@ Fabricator(:user) do
   ssn { Faker::IDNumber.ssn_valid }
   dob { Faker::Date.birthday(min_age = 18, max_age = 100) }
   district_id { Faker::Number.between(1, 10) }
-  auth_token { Faker::Lorem.characters(10) }
   password_digest { Faker::Internet.password(8) }
 end
 
