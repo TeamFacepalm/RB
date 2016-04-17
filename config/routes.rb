@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   delete 'logout',    to: 'sessions#destroy'
 
   resources :users
-  resources :candidates, only: :index do
+  resources :candidates, only: [:index, :create] do
     resources :votes, only: :create
   end
   resources :districts,  only: [:create, :show, :index]
