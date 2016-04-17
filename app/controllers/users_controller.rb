@@ -18,4 +18,9 @@ class UsersController < ApplicationController
              status: :unprocessable_entity
     end
   end
+
+  def index
+    @users = User.all
+    render "index.json.jbuilder", status: :ok
+  end
 end
