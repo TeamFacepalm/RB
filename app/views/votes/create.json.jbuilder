@@ -1,1 +1,1 @@
-json.votes @vote, :score, :candidate_id, :user_id 
+json.vote @vote
