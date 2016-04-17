@@ -33,6 +33,7 @@ gem 'paperclip'
 gem 'faker'
 gem 'faker-medical'
 gem 'fabrication'
+gem 'httparty'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
