@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :candidates, only: :index do
     resources :votes, only: :create
   end
-  resources :districts,  only: [:show, :index]
+  resources :districts,  only: [:create, :show, :index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
