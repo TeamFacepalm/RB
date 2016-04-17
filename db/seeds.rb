@@ -14,7 +14,7 @@ Fabricator(:user) do
   district_id { Faker::Number.between(1, 10) }
   auth_token { User.generate_token }
   password { Faker::Internet.password(8) }
-  choice { ["T", "S"].sample }
+  # choice { ["T", "S"].sample }
 end
 
 100.times { Fabricate(:user) }
