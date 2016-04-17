@@ -63,7 +63,7 @@ Votr is a app that allows the user to view real-time election results as well as
   },
   "avatar": "http://media.washtimes.com.s3.amazonaws.com/BernieSanders.jpg"
 }
-
+```
 #### POST /login
 
 	This logs in an authorized user

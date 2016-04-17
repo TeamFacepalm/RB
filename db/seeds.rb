@@ -13,7 +13,8 @@ Fabricator(:user) do
   dob { Faker::Date.birthday(min_age = 18, max_age = 100) }
   district_id { Faker::Number.between(1, 10) }
   auth_token { User.generate_token }
-  password_digest { Faker::Internet.password(8) }
+  password { Faker::Internet.password(8) }
+  choice { ["T", "S"].sample }
 end
 
-# 5.times { Fabricate(:user) }
+100.times { Fabricate(:user) }
